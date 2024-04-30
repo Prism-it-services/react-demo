@@ -1,11 +1,13 @@
-import Styled, { styled }  from 'styled-components'
+import Styled, { styled } from 'styled-components';
 
 export const Form = styled.form`
-
-display: flex;
-flex-direction: column;
-max-width: 400px;
-
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 `;
 
 export const Label = styled.label`

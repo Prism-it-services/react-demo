@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, gql, ApolloProvider, HttpLink} from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink} from '@apollo/client';
 
 
 //When you have time, change URI to environment variables for security reasons.

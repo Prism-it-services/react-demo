@@ -1,17 +1,18 @@
 
 import './App.css';
 //import { DisplayLocations } from './components/DisplayLocations/DisplayLocations';
-import { UserForm } from './components/UserForm/UserForm';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {UserFormRoute} from './routes/UserFormRoute';
+import {UserDetailsRoute} from './routes/UserDetailsRoute';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-{/*<DisplayLocations></DisplayLocations>*/}
-        <UserForm></UserForm>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UserFormRoute />} />
+        <Route path="/user-details" element={<UserDetailsRoute />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

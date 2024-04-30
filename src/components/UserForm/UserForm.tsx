@@ -3,6 +3,7 @@ import React from 'react';
 import { Form, Label, Input, Button} from './styles'
 import { useMutation } from '@apollo/client';
 import { CREATE_USER_MUTATION } from '../../graphqlApolloClient/mutations/createUser'
+import { useNavigate } from 'react-router-dom';
 
 
 type FormValues = {
@@ -21,6 +22,7 @@ type FormValues = {
 
 export const  UserForm = () => {
 
+    const navigate = useNavigate();
     const { register, handleSubmit } = useForm<FormValues>();
     const [createUser, { data, loading, error }] = useMutation(CREATE_USER_MUTATION);
 
@@ -33,7 +35,9 @@ export const  UserForm = () => {
                 }
             });
             console.log(result);
-              // Reset form fields after submission
+            navigate('/user-details');
+
+             
         } catch (err) {
             console.error("Error creating user:", err);
         }
