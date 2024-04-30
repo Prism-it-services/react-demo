@@ -5,9 +5,9 @@ import { ApolloClient, InMemoryCache, gql, ApolloProvider, HttpLink} from '@apol
 
 const httpLink = new HttpLink({
 
-    uri: 'https://flyby-router-demo.herokuapp.com/',
+    uri: 'https://26rcstle4bfvdbygbz2hm3nxky.appsync-api.us-east-1.amazonaws.com/graphql',
     headers: {
-        'x-api-key': 'YOUR_APPSYNC_API_KEY'
+        'x-api-key': 'da2-f3gmtqypsjebno7ookc4oyiyfq'
       }
 
 });
