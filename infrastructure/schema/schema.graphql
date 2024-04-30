@@ -33,5 +33,6 @@ schema {
 }
 
 type Query {
+  listUsers: [User]!
   _empty: String
 }

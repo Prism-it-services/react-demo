@@ -42,7 +42,12 @@ export class SArunStack extends cdk.Stack {
     responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem(),
   })
 
-
+  dataSource.createResolver('QueryUserListResolver',{
+    typeName: 'Query',
+    fieldName: 'listUsers',
+    requestMappingTemplate: appsync.MappingTemplate.dynamoDbScanTable(),
+    responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultList(),
+  });
 
   }
 }
