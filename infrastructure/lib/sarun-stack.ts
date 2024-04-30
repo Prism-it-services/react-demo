@@ -1,6 +1,8 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import * as appsync from 'aws-cdk-lib/aws-appsync'
+import * as appsync from 'aws-cdk-lib/aws-appsync';
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
+//import * as lambda from 'aws-cdk-lib/aws-lambda'
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class SArunStack extends cdk.Stack {
@@ -11,21 +13,36 @@ export class SArunStack extends cdk.Stack {
 
     name: 'api-to-persist-user-information',
     schema: appsync.SchemaFile.fromAsset('schema/schema.graphql'),
+    authorizationConfig: {
+      defaultAuthorization: {
+        authorizationType: appsync.AuthorizationType.API_KEY,
+      },
+    },
+    xrayEnabled: true,
   });
 
-  new cdk.CfnOutput(this, "GraphQLAPIURL", {
-    value: userApi.graphqlUrl
+
+  const userFormTable = new dynamodb.Table(this, 'UserInformationDataTable', {
+    partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+    billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
   });
 
 
-  new cdk.CfnOutput(this, "GraphQLAPIKey", {
-    value: userApi.apiKey || ''
-  });
+  const dataSource = userApi.addDynamoDbDataSource('userFormInfoDataSource', userFormTable);
 
- 
-  new cdk.CfnOutput(this, "Stack Region", {
-    value: this.region
-  });
+  dataSource.createResolver('MutationAddUserInfoResolver', {
+    typeName: 'Mutation',
+    fieldName: 'createUser',
+    requestMappingTemplate: appsync.MappingTemplate.dynamoDbPutItem(
+      appsync.PrimaryKey.partition('id').auto(), 
+      appsync.Values.projecting('input')
+     
+    ), 
+
+    responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem(),
+  })
+
+
 
   }
 }
