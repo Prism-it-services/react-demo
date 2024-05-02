@@ -45,3 +45,5 @@ Create a simple form using ALL the above said tech stack so that user can enter 
 7. Phase 7:
 - Mobile app using React Native
 
+To test build
+
