@@ -1,6 +1,6 @@
 import {useForm, SubmitHandler } from 'react-hook-form'
 import React from 'react';
-import { Form, Label, Input, Button} from './styles'
+import { Form, Label, Input, Button, InputContainer, ErrorMessage} from './styles'
 import { useMutation } from '@apollo/client';
 import { CREATE_USER_MUTATION } from '../../graphqlApolloClient/mutations/createUser'
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +23,7 @@ type FormValues = {
 export const  UserForm = () => {
 
     const navigate = useNavigate();
-    const { register, handleSubmit } = useForm<FormValues>();
+    const { register, handleSubmit, formState: {errors} } = useForm<FormValues>();
     const [createUser, { data, loading, error }] = useMutation(CREATE_USER_MUTATION);
 
     const onSubmitHandler: SubmitHandler<FormValues> = async(data) => {
@@ -35,7 +35,7 @@ export const  UserForm = () => {
                 }
             });
             console.log(result);
-            navigate('/user-details');
+            navigate('/graphql-with-apollo-client');
 
              
         } catch (err) {
@@ -44,13 +44,23 @@ export const  UserForm = () => {
     };
 
     return(
+       
+ 
+       
     <Form onSubmit = {handleSubmit(onSubmitHandler)}>
        <Label htmlFor='firstName'>First Name</Label>
-       <Input {...register('firstName')}></Input>
-
+       <InputContainer>
+       <Input {...register('firstName', {
+        required: "Please enter a valid First Name", 
+        maxLength: {value: 12, message: 'First Name cannot exceed 12 characters'}})}/>
+        {errors.firstName && <ErrorMessage>{errors.firstName.message}</ErrorMessage>}
+        </InputContainer>
+        
        <Label htmlFor='lastName'>Last Name</Label>
-       <Input {...register('lastName')}></Input>
-
+       <InputContainer>
+       <Input {...register('lastName', {required: "Please enter a valid Last Name"})}></Input>
+       {errors.lastName && <ErrorMessage>{errors.lastName.message}</ErrorMessage>}
+</InputContainer>
        <Label htmlFor='dateOfBirth'>Date of Birth</Label>
        <Input {...register('dateOfBirth')}></Input>
 
@@ -72,9 +82,10 @@ export const  UserForm = () => {
        <Label htmlFor='phoneNumber'>Phone Number</Label>
        <Input {...register('phoneNumber')}></Input>
 
-<Button type='submit'>Submit Arun</Button>
+<Button type='submit'>Submit</Button>
 
     </Form>
+   
     );
 
 };

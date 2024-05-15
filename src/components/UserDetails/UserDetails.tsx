@@ -29,7 +29,7 @@ const UserDetails = () => {
 
   return (
     <div>
-      <PageTitle>User Details</PageTitle>
+      <PageTitle>User Details From Dynamo DB</PageTitle>
       <Table>
         <thead>
           <tr>

@@ -4,13 +4,17 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {UserFormRoute} from './routes/UserFormRoute';
 import {UserDetailsRoute} from './routes/UserDetailsRoute';
+import Header from './components/Header/Header';
+import { AboutMe } from './components/AboutMe/AboutMe';
 
 function App() {
   return (
     <BrowserRouter>
+    <Header></Header>
       <Routes>
-        <Route path="/" element={<UserFormRoute />} />
-        <Route path="/user-details" element={<UserDetailsRoute />} />
+        <Route path="/about-me" element = {<AboutMe></AboutMe>}></Route>
+        <Route path="/react-hook-form" element={<UserFormRoute />} />
+        <Route path="/graphql-with-apollo-client" element={<UserDetailsRoute />} />
       </Routes>
     </BrowserRouter>
   );

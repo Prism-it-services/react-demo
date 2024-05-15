@@ -20,6 +20,7 @@ export const Input = styled.input`
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: calc(100% - 1rem);
 `;
 
 export const Button = styled.button`
@@ -34,4 +35,26 @@ export const Button = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+`;
+
+export const PageTitle = styled.h1`
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+`;
+export const ErrorMessage = styled.p`
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
 `;
