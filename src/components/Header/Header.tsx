@@ -8,7 +8,13 @@ const Header = () => {
 <Navlinks>
 
     <ul>
-        <li><a href = "about-me">About Me</a></li>
+        <li><a href = "about-me">About Me</a>
+        <ul>
+        <li><a href = "timelines-of-my-cv">Career Overview</a></li>
+        <li><a href = "technical-skills">Technical Skills</a></li>
+        </ul>
+        
+        </li>
         <li><a href = "proof-of-concept">Proof Of Concept (POC)</a>
         <ul>
             <li><a href = "react-hook-form">React Hook Form</a></li>
@@ -28,7 +34,8 @@ const Header = () => {
         </li>
         <li><a href = "my-medium-term-goals">Medium Term Learning Goals</a></li>
         <li><a href = "mßy-long-term-goals">Long Term Learning Goals</a></li>
-        <li><a href = "timelines-of-my-cv">Timelines of my CV</a></li>
+        <li><a href = "my-github-repo">My Github Repo</a></li>
+        
     </ul>
 </Navlinks>
         </HeaderContainer>
