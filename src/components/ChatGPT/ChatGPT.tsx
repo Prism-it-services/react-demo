@@ -13,7 +13,15 @@ const ChatGPT = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const result = await axios.post('https://amhtutvzoi.execute-api.us-east-1.amazonaws.com/prod', { message: input });
+      const result = await axios.post('https://amhtutvzoi.execute-api.us-east-1.amazonaws.com/prod/chat', 
+      { message: input },
+      {
+        headers: {
+          'x-api-key': 'a4yE9UwOWw9aQGpLizubWXwRxJdse6P1hteqcpwc',
+          'Content-Type': 'application/json',
+        }
+      }
+    );
       setResponse(result.data.reply);
     } catch (error) {
       console.error('Error calling API:', error);

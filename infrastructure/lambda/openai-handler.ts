@@ -17,12 +17,22 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+      },
       body: JSON.stringify({ reply: completion.choices[0].message.content }),
     };
   } catch (error) {
     console.error('Error calling OpenAI API:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+      },
       body: JSON.stringify({ error: 'Error calling OpenAI API' }),
     };
   }
