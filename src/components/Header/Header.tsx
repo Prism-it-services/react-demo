@@ -32,8 +32,8 @@ const Header = () => {
             </li>
         </ul>
         </li>
-        <li><a href = "my-medium-term-goals">Medium Term Learning Goals</a></li>
-        <li><a href = "mßy-long-term-goals">Long Term Learning Goals</a></li>
+        <li><a href = "my-learning-goals">MY Learning Goals</a></li>
+        <li><a href = "my-blogs">My Blogs</a></li>
         <li><a href = "my-github-repo">My Github Repo</a></li>
         
     </ul>

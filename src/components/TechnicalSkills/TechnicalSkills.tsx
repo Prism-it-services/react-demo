@@ -1,56 +1,71 @@
-import { Container, Title, Section, SectionTitle, List, ListItem   } from './styles'
+import { Header, Container, SkillsList, SkillItem, CheckboxLabel, Checkbox, SectionTitle, SkillText, SubSkillsList, SubSkillItem, SubSkillText    } from './styles'
 
-export const TechnicalSkills = () => {
+type TechnicalSkills = {
+    [key: string]: SubSkills[];
+  };
 
+  type SubSkills = {
+    skill: string;
+    subSkills?: string[];
+  };
+
+const technicalSkills: TechnicalSkills = {
+    'Front End': [
+        { skill: 'React', subSkills: ['React Form Hook', 'React-Router Dom'] },
+        { skill: 'Styled Components' },
+        { skill: 'Ant Design' },
+        { skill: 'Storybook' }
+      ],
+      'Middleware': [
+        { skill: 'Node.js' },
+        { skill: 'ASP.NET' }
+      ],
+      'Database': [
+        { skill: 'RDBMS', subSkills: ['MySQL', 'SQL Server'] },
+        { skill: 'No SQL', subSkills: ['MongoDB', 'Dynamo DB']  },
+      ],
+      'Infrastructure': [
+        { skill: 'AWS services:' },
+        { skill: 'Lambda' },
+        { skill: 'CDK v2.0' },
+        { skill: 'API Gateway' },
+        { skill: 'Route 53' },
+        { skill: 'SSL certificate for https://' },
+        { skill: 'AWS Appsync' },
+        { skill: 'Cloud Front' },
+      ]
+  };
+  
+  export const TechnicalSkills = () => {
     return (
-        <Container>
-        <Title>Technical Skills</Title>
-        <Section>
-          <SectionTitle>Front End:</SectionTitle>
-          <List>
-            <ListItem>React</ListItem>
-            <ListItem>Styled Components</ListItem>
-            <ListItem>Ant Design</ListItem>
-            <ListItem>Storybook</ListItem>
-          </List>
-        </Section>
-        <Section>
-          <SectionTitle>Middleware:</SectionTitle>
-          <List>
-            <ListItem>Node.js</ListItem>
-            <ListItem>ASP.NET</ListItem>
-          </List>
-        </Section>
-        <Section>
-          <SectionTitle>Database:</SectionTitle>
-          <List>
-            <ListItem>MySQL</ListItem>
-            <ListItem>SQL Server</ListItem>
-            <ListItem>MongoDB</ListItem>
-            <ListItem>DynamoDB</ListItem>
-          </List>
-        </Section>
-        <Section>
-          <SectionTitle>Infrastructure:</SectionTitle>
-          <List>
-            <ListItem>AWS services:</ListItem>
-            <List>
-              <ListItem>Lambda</ListItem>
-              <ListItem>CDK v2.0</ListItem>
-              <ListItem>API Gateway</ListItem>
-              <ListItem>S3</ListItem>
-              <ListItem>Route 53</ListItem>
-            </List>
-          </List>
-        </Section>
-        <Section>
-          <SectionTitle>DevOps:</SectionTitle>
-          <List>
-            <ListItem>Infrastructure As Code - using CDK v2.0 and CloudFormation</ListItem>
-            <ListItem>CI/CD</ListItem>
-          </List>
-        </Section>
+      <Container>
+        <Header>Technical Skills</Header>
+        <SectionTitle>Demo done</SectionTitle>
+        {Object.keys(technicalSkills).map(section => (
+          <div key={section}>
+            <SectionTitle>{section}:</SectionTitle>
+            <SkillsList>
+              {technicalSkills[section].map(({ skill, subSkills }) => (
+                <SkillItem key={skill}>
+                  <CheckboxLabel>
+                    <SkillText>{skill}</SkillText>
+                    <Checkbox type="checkbox" />
+                  </CheckboxLabel>
+                  {subSkills && (
+                    <SubSkillsList>
+                      {subSkills.map(subSkill => (
+                        <SubSkillItem key={subSkill}>
+                          <SubSkillText>{subSkill}</SubSkillText>
+                          <Checkbox type="checkbox" />
+                        </SubSkillItem>
+                      ))}
+                    </SubSkillsList>
+                  )}
+                </SkillItem>
+              ))}
+            </SkillsList>
+          </div>
+        ))}
       </Container>
-    
-   )
-}
+    );
+  };

@@ -10,6 +10,7 @@ import ChatGPT from './components/ChatGPT/ChatGPT';
 import { TimelinesOfCV} from './components/TimeilnesOfCV/TimelinesOfCV'
 import MyGithubRepo from './components/MyGithubRepor/MyGithubRepo';
 import { TechnicalSkills } from './components/TechnicalSkills/TechnicalSkills';
+import { MyBlogs } from './components/MyBlogs/MyBlogs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path = "chat-gpt" element={<ChatGPT/>}/>
         <Route path='my-github-repo' element = {<MyGithubRepo />}></Route>
         <Route path='technical-skills' element = {<TechnicalSkills />}></Route>
+        <Route path='my-blogs' element={<MyBlogs/>}></Route>
       </Routes>
     </BrowserRouter>
   );
