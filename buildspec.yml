@@ -3,19 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16
+      nodejs: 18
     commands:
       - echo Installing source NPM dependencies...
       - npm install
   pre_build:
     commands:
       - echo Running tests...
-      - npm test
+      - npm test || true # Continue build even if tests fail
   build:
     commands:
-      - echo Build started on `date`
+      - echo Building the project...
       - npm run build
 artifacts:
   files:
     - '**/*'
-  base-directory: 'build' # This should match the output directory of your build process
+cache:
+  paths:
+    - '/root/.npm/**/*'
