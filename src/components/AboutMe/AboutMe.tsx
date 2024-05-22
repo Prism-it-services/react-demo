@@ -7,7 +7,7 @@ export const AboutMe  = () => {
   return (
 
     <Container>
-    <Header> About me</Header>
+    <Header> About me Sangeetha</Header>
     <Paragraph>Hi, I'm Arun. I have around 24 years of experience in various roles which includes testing/UAT, Operations, Product Management
       , Helpdesk etc. I have worked in large corporation like Citibank and start ups. </Paragraph> 
      <Paragraph> I have taken a career break from May 2015 to Oct 2016 to stay at home and learn fundamentals of programming. During this 18 month break,
