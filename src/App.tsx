@@ -17,6 +17,7 @@ function App() {
     <BrowserRouter>
     <Header></Header>
       <Routes>
+      <Route path="/" element = {<AboutMe></AboutMe>}></Route>
         <Route path="/about-me" element = {<AboutMe></AboutMe>}></Route>
         <Route path="/timelines-of-my-cv" element = {<TimelinesOfCV></TimelinesOfCV>}></Route>
         <Route path="/react-hook-form" element={<UserFormRoute />} />
