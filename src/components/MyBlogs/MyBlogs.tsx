@@ -13,6 +13,7 @@ return (
     <li>tsconfig.json - Compiler options</li>
     <li>React Rendering concepts (Mark Erikson blog)</li>
     <li>State Management blog (uesState vs props vs flux implementation)</li>
+    <li>How to avoid nodemodules and other components being deployed to S3 via codepipeline? Buildspec.yml</li>
 </ul>
 </>
 )};
