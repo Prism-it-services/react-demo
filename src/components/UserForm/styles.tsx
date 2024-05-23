@@ -23,7 +23,7 @@ export const Input = styled.input`
   width: calc(100% - 1rem);
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: white;

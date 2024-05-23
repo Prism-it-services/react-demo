@@ -1,9 +1,11 @@
 import {useForm, SubmitHandler } from 'react-hook-form'
 import React from 'react';
-import { Form, Label, Input, Button, InputContainer, ErrorMessage} from './styles'
+import { Form, Label, Input, InputContainer, ErrorMessage, StyledButton} from './styles'
 import { useMutation } from '@apollo/client';
 import { CREATE_USER_MUTATION } from '../../graphqlApolloClient/mutations/createUser'
 import { useNavigate } from 'react-router-dom';
+
+
 
 
 type FormValues = {
@@ -82,7 +84,7 @@ export const  UserForm = () => {
        <Label htmlFor='phoneNumber'>Phone Number</Label>
        <Input {...register('phoneNumber')}></Input>
 
-<Button type='submit'>Submit</Button>
+<StyledButton type='submit'>Submit</StyledButton>
 
     </Form>
    
