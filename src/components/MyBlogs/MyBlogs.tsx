@@ -5,6 +5,7 @@ return (
 
 <>
 <h1>Welcome to my blog page</h1>
+<h3>To do list</h3>
 <ul>
     <li>S3 bucket name for static website should be same as domain name. Why??</li>
     <li>For https SSL encryption set up, CNAME in Cloud Front should be set to domain name for it to appear in Route 53 dropdown</li>
@@ -14,6 +15,7 @@ return (
     <li>React Rendering concepts (Mark Erikson blog)</li>
     <li>State Management blog (uesState vs props vs flux implementation)</li>
     <li>How to avoid nodemodules and other components being deployed to S3 via codepipeline? Buildspec.yml</li>
+    <li>Responsive Web Design - RWD - View port and Grid</li>
 </ul>
 </>
 )};

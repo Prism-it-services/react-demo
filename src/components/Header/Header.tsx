@@ -18,7 +18,12 @@ const Header = () => {
         <li><a href = "proof-of-concept">Proof Of Concept (POC)</a>
         <ul>
             <li><a href = "react-hook-form">React Hook Form</a></li>
-            <li><a href = "styled-components">Styled Components</a></li>
+            <li><a href = "styled-components">Styled Components</a>
+            <ul>
+                <li><a href = "rwd-responsive-web-design">RWD Implementation</a></li>
+                <li><a href = "design-system-storybook">Design System - Storybook</a></li>
+            </ul>
+            </li>
             <li><a href = "graphql-with-apollo-client">GraphlQL & Apollo Client</a></li>
             <li><a href = "devops-infrastructure">Devops/Infrastructure</a>
             <ul>
