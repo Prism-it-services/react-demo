@@ -11,6 +11,9 @@ import { TimelinesOfCV} from './components/TimeilnesOfCV/TimelinesOfCV'
 import MyGithubRepo from './components/MyGithubRepor/MyGithubRepo';
 import { TechnicalSkills } from './components/TechnicalSkills/TechnicalSkills';
 import { MyBlogs } from './components/MyBlogs/MyBlogs';
+import { MyLearningGoals } from './components/MyLearingGoals/MyLearingGoals';
+import { RWD } from './components/RWD/RWD';
+import { DesignSystemSB } from './components/DesignSystemSB/DesignSystemSB';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path='my-github-repo' element = {<MyGithubRepo />}></Route>
         <Route path='technical-skills' element = {<TechnicalSkills />}></Route>
         <Route path='my-blogs' element={<MyBlogs/>}></Route>
+        <Route path= 'my-learning-goals' element = {<MyLearningGoals/>}></Route>
+        <Route path='rwd-responsive-web-design' element={<RWD/>}></Route>
+        <Route path='design-system-storybook' element= {<DesignSystemSB/>}></Route>
       </Routes>
     </BrowserRouter>
   );
