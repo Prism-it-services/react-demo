@@ -1,9 +1,10 @@
+import { Layout } from "../Layout/Layout";
 
 export const MyBlogs = () => {
 
 return (
 
-<>
+<Layout>
 <h1>Welcome to my blog page</h1>
 <h3>To do list</h3>
 <ul>
@@ -17,5 +18,5 @@ return (
     <li>How to avoid nodemodules and other components being deployed to S3 via codepipeline? Buildspec.yml</li>
     <li>Responsive Web Design - RWD - View port and Grid</li>
 </ul>
-</>
+</Layout>
 )};

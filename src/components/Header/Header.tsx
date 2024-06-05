@@ -1,9 +1,11 @@
 import React from 'react';
-import { HeaderContainer, Navlinks} from './styles';
+import { HeaderContainer, Navlinks, GridContainer} from './styles';
+import { Grid} from '../../components/Grid/Grid'
 
 const Header = () => {
 
     return(
+        
         <HeaderContainer>
 <Navlinks>
 
@@ -43,7 +45,9 @@ const Header = () => {
         
     </ul>
 </Navlinks>
+
         </HeaderContainer>
+       
     );
 };
 

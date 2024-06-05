@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Header, Paragraph } from './styles'
+import { Container, StyledHeader, Paragraph } from './styles'
+import { Layout } from '../Layout/Layout';
 
 
 
@@ -7,7 +8,7 @@ export const AboutMe  = () => {
   return (
 
     <Container>
-    <Header> About me </Header>
+    <StyledHeader> About me </StyledHeader>
     <Paragraph>Hi, I'm Arun. I have around 24 years of experience in various roles which includes testing/UAT, Operations, Product Management
       , Helpdesk etc. I have worked in large corporation like Citibank and start ups. </Paragraph> 
      <Paragraph> I have taken a career break from May 2015 to Oct 2016 to stay at home and learn fundamentals of programming. During this 18 month break,
@@ -22,6 +23,7 @@ export const AboutMe  = () => {
 
   
       </Container>
+     
   );
 };
 
