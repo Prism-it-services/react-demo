@@ -4,16 +4,36 @@ export const HeaderContainer = styled.header`
 background: linear-gradient(to bottom, rgb(11, 190, 146), rgb(5, 189, 177));
 color: white;
 display: flex;
-justify-content: space-between;
+flex-direction: column;
 align-items: center;
 padding: 1rem 2rem;
+grid-column: span 12;
+
+@media (min-width: 768px) {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 `;
+
+
 
 export const Navlinks = styled.nav`
   ul {
     list-style: none;
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    
+
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 50px;
+    }
 
     > li {
       position: relative; 
@@ -58,4 +78,11 @@ export const Navlinks = styled.nav`
       }
     }
   }
+`;
+
+export const GridContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 `;

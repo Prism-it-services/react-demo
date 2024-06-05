@@ -5,7 +5,7 @@ export const Container = styled.div`
   font-family: Arial, sans-serif;
 `;
 
-export const Header = styled.h1`
+export const StyledHeader = styled.h1`
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 20px;

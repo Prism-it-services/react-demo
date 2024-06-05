@@ -1,4 +1,6 @@
 import type { Preview } from "@storybook/react";
+import { addons } from '@storybook/addons';
+import { STORY_RENDERED } from '@storybook/core-events';
 
 const preview: Preview = {
   parameters: {
@@ -11,4 +13,13 @@ const preview: Preview = {
   },
 };
 
-export default preview;
+export const parameters = preview.parameters;
+
+addons.getChannel().once(STORY_RENDERED, () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.get('path')) {
+    window.location.href = '?path=/story/welcome--default';
+  }
+});
+
+

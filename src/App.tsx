@@ -14,11 +14,16 @@ import { MyBlogs } from './components/MyBlogs/MyBlogs';
 import { MyLearningGoals } from './components/MyLearingGoals/MyLearingGoals';
 import { RWD } from './components/RWD/RWD';
 import { DesignSystemSB } from './components/DesignSystemSB/DesignSystemSB';
+import { RadioButton } from './components/GeethaButton/GeethaButton';
+import { ThemeProvider} from 'styled-components'
+import { theme } from './components/GeethaButton/theme';
+import { Layout } from './components/Layout/Layout';
 
 function App() {
   return (
+    <ThemeProvider theme ={theme}>
     <BrowserRouter>
-    <Header></Header>
+ <Layout>
       <Routes>
       <Route path="/" element = {<AboutMe></AboutMe>}></Route>
         <Route path="/about-me" element = {<AboutMe></AboutMe>}></Route>
@@ -29,11 +34,19 @@ function App() {
         <Route path='my-github-repo' element = {<MyGithubRepo />}></Route>
         <Route path='technical-skills' element = {<TechnicalSkills />}></Route>
         <Route path='my-blogs' element={<MyBlogs/>}></Route>
-        <Route path= 'my-learning-goals' element = {<MyLearningGoals/>}></Route>
+        <Route path= 'my-learning-goals' element = {<RadioButton
+                            id="example-radio-button"
+                            label="Example Radio Button"
+                            value="example"
+                            checked={true}
+                            onChange={() => {}}
+                        />}></Route>
         <Route path='rwd-responsive-web-design' element={<RWD/>}></Route>
         <Route path='design-system-storybook' element= {<DesignSystemSB/>}></Route>
       </Routes>
+      </Layout>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
