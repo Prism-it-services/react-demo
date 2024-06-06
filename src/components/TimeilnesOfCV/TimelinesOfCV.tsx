@@ -11,7 +11,7 @@ const events = [
     {
         date: 'Feb 2019 To Dec 2023',
         title: 'Co-Founder, Board Member, COO & CRO, Orbital',
-        description: 'Co-founded a fintech with 4 other parthers, bootstrapped for 4 years, received £5M pre-series A funding in Q1 2023, exited the business in Dec 2023 ',
+        description: 'Co-founded a fintech with 4 other parthers, bootstrapped for 4 years, currently 100+ strong team, received pre-series A funding in Q1 2023, exited the business in Dec 2023 ',
         link: 'https://www.getorbital.com/our-team'
       },
 

@@ -1,8 +1,8 @@
-import { LayoutContainer } from "./styles";
+import { LayoutContainer, LayoutContainerNew } from "./styles";
 import React, { ReactNode } from 'react';
 import Header from '../Header/Header';
 import { Footer } from "../Footer/Footer";
-import { Grid } from "../Grid/Grid";
+
 
 interface LayoutProps {
     children: ReactNode;

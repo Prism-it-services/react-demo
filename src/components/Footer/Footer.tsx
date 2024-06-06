@@ -1,6 +1,10 @@
 import React from 'react';
+import {StyledFooter} from './styles';
 
 export const Footer = () => {
 
-    return (<h3>This is Footer</h3>)
-}
+    return (
+    
+    <StyledFooter>This is the Footer</StyledFooter>
+    )
+};

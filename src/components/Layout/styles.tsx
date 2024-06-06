@@ -27,18 +27,18 @@ main {
   }
 `;
 
-export const GridContainer = styled.div`
-  width: 100%;
-  display: grid;
+export const LayoutContainerNew = styled.div`
+
+display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(6, 1fr);
-  }
 
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 `;
+
+const Main = styled.main`
+  grid-column: 2 / span 11;
+  padding: 1rem;
+`;
+
