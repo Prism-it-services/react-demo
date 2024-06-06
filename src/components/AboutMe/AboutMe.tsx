@@ -17,7 +17,7 @@ export const AboutMe  = () => {
       </Paragraph> 
      <Paragraph> I paused the pursuit of my passion with technology to join my colleague from Citi to work as a Product manager with equity option in a Glasgow/London based
       fintech 'LUUP Group Ltd'.</Paragraph>
-     <Paragraph> I have co-founded a fintech 'Orbital' with 4 other partners in 2018 and helped to build it into a sucessful business with 100+ employees. I had to leave the business in Dec 2023 due to difference of opinion with other 
+     <Paragraph> I have co-founded a fintech 'Orbital' with 4 other partners in 2018 and helped to build it into a successful business with 100+ employees. I had to leave the business in Dec 2023 due to difference of opinion with other 
       co-founders.</Paragraph>
       <Paragraph>I'm looking for a job as a Software Developer so that I can pursue my passion with technology.</Paragraph>
 

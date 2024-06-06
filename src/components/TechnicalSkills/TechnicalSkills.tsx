@@ -103,6 +103,7 @@ const technicalSkills: TechnicalSkills = {
     { skill: 'Design Systems', subSkills:['Storybook'] },
     { skill: 'Apollo Client (for Graphql)' },
     { skill: 'Testing Framework', subSkills:['Jest'] },
+    { skill: 'Bundlers deep dive', subSkills:['Weback', 'Vite'] },
   ],
   'Middleware': [
     { skill: 'Node.js' },
@@ -114,7 +115,7 @@ const technicalSkills: TechnicalSkills = {
     { skill: 'Graph QL Implementation', subSkills: ['using App Sync']  },
   ],
   'Infrastructure': [
-    { skill: 'AWS services:', subSkills: [ 'Lambda', 'CDK v2.0', 'API Gateway', 'AWS Appsync', 'S3', 'EC2', 'IAM'  ] },
+    { skill: 'AWS services:', subSkills: [ 'Lambda', 'CDK v2.0', 'Cloud Formation', 'API Gateway', 'AWS Appsync', 'S3', 'EC2', 'IAM', 'Amazon Bedrock',   ] },
     { skill: 'CI/CD', subSkills: ['Code Pipeline', 'Code Build'] },
     { skill: 'Version Control', subSkills: ['Git Hub', 'Atlassian BitBukcet'] },
     { skill: 'DNS & SSL', subSkills: ['Route 53', 'Cloud Front', 'AWS Certificate Manager (ACM)' ] },

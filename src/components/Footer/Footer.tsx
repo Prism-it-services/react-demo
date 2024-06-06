@@ -5,6 +5,6 @@ export const Footer = () => {
 
     return (
     
-    <StyledFooter>This is the Footer</StyledFooter>
+    <StyledFooter>This is the Footer to demo Layout</StyledFooter>
     )
 };
