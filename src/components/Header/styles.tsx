@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
 background: linear-gradient(to bottom, rgb(11, 190, 146), rgb(5, 189, 177));
 color: white;
-display: grid;
+display: flex;
 flex-direction: column;
 align-items: center;
 padding: 1rem 2rem;
 grid-column: span 12;
+justify-content: space-between;
 
 /* @media (min-width: 768px) {
   flex-direction: column;
@@ -22,11 +23,13 @@ export const Navlinks = styled.nav`
   ul {
     list-style: none;
     display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 0;
-    margin: 0;
+   
+
     
 
 
