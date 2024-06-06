@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, Navlinks, GridContainer} from './styles';
+import { HeaderContainer, Navlinks} from './styles';
 import { Grid} from '../../components/Grid/Grid'
 
 const Header = () => {
