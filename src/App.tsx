@@ -34,13 +34,7 @@ function App() {
         <Route path='my-github-repo' element = {<MyGithubRepo />}></Route>
         <Route path='technical-skills' element = {<TechnicalSkills />}></Route>
         <Route path='my-blogs' element={<MyBlogs/>}></Route>
-        <Route path= 'my-learning-goals' element = {<RadioButton
-                            id="example-radio-button"
-                            label="Example Radio Button"
-                            value="example"
-                            checked={true}
-                            onChange={() => {}}
-                        />}></Route>
+        <Route path= 'my-learning-goals' element = {<MyLearningGoals/>}></Route>
         <Route path='rwd-responsive-web-design' element={<RWD/>}></Route>
         <Route path='design-system-storybook' element= {<DesignSystemSB/>}></Route>
       </Routes>
